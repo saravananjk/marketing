@@ -1,0 +1,230 @@
+/* ===========================================================
+   Saravanan J — Digital Marketing Freelancer Portfolio
+   Core stylesheet (works alongside Tailwind CDN utilities)
+   =========================================================== */
+
+:root{
+  --primary:#2563EB;
+  --secondary:#14B8A6;
+  --accent:#F97316;
+  --bg-dark:#0F172A;
+  --bg-dark-2:#131c31;
+  --bg-light:#F8FAFC;
+  --text-dark:#E2E8F0;
+  --text-light:#0F172A;
+  --card-dark: rgba(255,255,255,0.05);
+  --card-dark-border: rgba(255,255,255,0.10);
+  --card-light: rgba(255,255,255,0.7);
+  --card-light-border: rgba(15,23,42,0.08);
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:var(--bg-dark);
+  color:var(--text-dark);
+  transition:background .35s ease, color .35s ease;
+}
+
+body.light{
+  background:var(--bg-light);
+  color:var(--text-light);
+}
+
+h1,h2,h3,h4,.font-display{
+  font-family:'Poppins', sans-serif;
+  letter-spacing:-0.02em;
+}
+
+/* ---------- Gradient text & buttons ---------- */
+.gradient-text{
+  background:linear-gradient(90deg,var(--accent),var(--primary));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.btn-gradient{
+  background:linear-gradient(90deg,var(--accent),var(--primary));
+  background-size:160% 100%;
+  background-position:0% 0%;
+  transition:background-position .4s ease, transform .2s ease, box-shadow .2s ease;
+  box-shadow:0 8px 24px -8px rgba(37,99,235,.55);
+}
+.btn-gradient:hover{
+  background-position:100% 0%;
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px -6px rgba(249,115,22,.5);
+}
+
+.btn-outline{
+  border:1.5px solid var(--card-dark-border);
+  transition:border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.btn-outline:hover{ transform:translateY(-2px); border-color:var(--secondary); }
+body.light .btn-outline{ border-color:var(--card-light-border); }
+
+/* ---------- Glassmorphism cards ---------- */
+.glass{
+  background:var(--card-dark);
+  border:1px solid var(--card-dark-border);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  transition:transform .3s ease, box-shadow .3s ease, background .3s ease, border-color .3s ease;
+}
+body.light .glass{
+  background:var(--card-light);
+  border:1px solid var(--card-light-border);
+  box-shadow:0 4px 20px -8px rgba(15,23,42,.08);
+}
+.glass:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px -16px rgba(37,99,235,.35);
+  border-color:rgba(37,99,235,.4);
+}
+
+/* ---------- Animated gradient blobs ---------- */
+.blob{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(60px);
+  opacity:.55;
+  animation:float 9s ease-in-out infinite;
+  pointer-events:none;
+}
+.blob-1{width:380px;height:380px;background:radial-gradient(circle at 30% 30%,var(--primary),transparent 70%);top:-40px;right:-60px;animation-delay:0s;}
+.blob-2{width:300px;height:300px;background:radial-gradient(circle at 60% 60%,var(--accent),transparent 70%);bottom:-40px;right:120px;animation-delay:2s;}
+.blob-3{width:220px;height:220px;background:radial-gradient(circle at 40% 40%,var(--secondary),transparent 70%);top:200px;right:280px;animation-delay:4s;}
+
+@keyframes float{
+  0%,100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(-16px,18px) scale(1.06); }
+}
+
+/* ---------- Floating skill/stat badges around hero photo ---------- */
+.badge-chip{
+  animation:orbit 6s ease-in-out infinite;
+}
+.badge-chip.d2{ animation-delay:1.2s; }
+.badge-chip.d3{ animation-delay:2.4s; }
+
+@keyframes orbit{
+  0%,100%{ transform:translateY(0) rotate(0deg); }
+  50%{ transform:translateY(-10px) rotate(1.5deg); }
+}
+
+/* ---------- Scroll reveal ----------
+   IMPORTANT: content is visible by default (progressive enhancement).
+   JS adds .reveal-armed only after it confirms it's running, then
+   animates elements in via .is-visible. If JS is slow, blocked, or
+   fails, content never gets stuck hidden. */
+.reveal{
+  opacity:1;
+  transform:none;
+}
+.reveal-armed .reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal-armed .reveal.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ---------- Skill bars ---------- */
+.skill-bar{
+  height:8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  overflow:hidden;
+}
+body.light .skill-bar{ background:rgba(15,23,42,.08); }
+.skill-bar-fill{
+  height:100%;
+  width:0%;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--secondary),var(--primary));
+  transition:width 1.2s cubic-bezier(.2,.8,.2,1);
+}
+
+/* ---------- Header ---------- */
+#site-header{
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  background:rgba(15,23,42,.7);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:background .3s ease, border-color .3s ease;
+}
+body.light #site-header{
+  background:rgba(248,250,252,.75);
+  border-bottom:1px solid rgba(15,23,42,.06);
+}
+
+.nav-link{ position:relative; }
+.nav-link::after{
+  content:'';
+  position:absolute; left:0; bottom:-4px;
+  width:0; height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--primary));
+  transition:width .25s ease;
+}
+.nav-link:hover::after{ width:100%; }
+
+.mega-menu{
+  opacity:0; visibility:hidden; transform:translateY(8px);
+  transition:opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.has-mega:hover .mega-menu, .mega-menu:hover{
+  opacity:1; visibility:visible; transform:translateY(0);
+}
+
+/* ---------- Floating action buttons ---------- */
+.fab{
+  box-shadow:0 10px 24px -6px rgba(0,0,0,.35);
+  transition:transform .2s ease;
+}
+.fab:hover{ transform:scale(1.08); }
+
+/* ---------- Misc ---------- */
+.section-eyebrow{
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  font-weight:600;
+}
+
+.marquee-track{
+  animation:marquee 22s linear infinite;
+}
+@keyframes marquee{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+::-webkit-scrollbar{ width:10px; }
+::-webkit-scrollbar-track{ background:transparent; }
+::-webkit-scrollbar-thumb{ background:linear-gradient(var(--primary),var(--secondary)); border-radius:999px; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+}
+
+/* Loading screen
+   Capped at a max of ~1.2s by JS no matter what, so it can never
+   permanently block the page (see js/main.js). */
+#loader{
+  position:fixed; inset:0; z-index:9999;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bg-dark);
+  transition:opacity .4s ease, visibility .4s ease;
+}
+#loader.hide{ opacity:0; visibility:hidden; }
+.spinner{
+  width:46px;height:46px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.15);
+  border-top-color:var(--accent);
+  animation:spin .8s linear infinite;
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }

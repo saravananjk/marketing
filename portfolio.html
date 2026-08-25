@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio &amp; Case Studies | Saravanan J</title>
+<meta name="description" content="Filterable portfolio of SEO, Google Ads, social media and website development projects with measurable results.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans">
+<div id="loader"><div class="spinner"></div></div>
+
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16">
+    <a href="index.html" class="font-display font-bold text-lg tracking-tight">Saravanan<span class="gradient-text">J.</span></a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="portfolio.html" class="nav-link font-semibold">Portfolio</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" class="w-10 h-10 rounded-full glass flex items-center justify-center">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.36 6.36l-.7-.7M6.34 6.34l-.7-.7m12.02 0l-.7.7M6.34 17.66l-.7.7M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+      </button>
+      <a href="https://wa.me/+917904782477" class="hidden sm:inline-block btn-gradient text-white text-sm font-semibold px-5 py-2.5 rounded-full">Book Free Consultation</a>
+      <button id="menu-toggle" class="lg:hidden w-10 h-10 rounded-full glass flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden px-5 pb-5 flex flex-col gap-3 text-sm font-medium glass mx-4 rounded-2xl">
+    <a href="index.html" class="py-2">Home</a><a href="about.html" class="py-2">About</a><a href="services.html" class="py-2">Services</a><a href="portfolio.html" class="py-2">Portfolio</a><a href="contact.html" class="py-2">Contact</a>
+  </div>
+</header>
+
+<section class="relative overflow-hidden pt-32 pb-14 px-5 sm:px-8">
+  <div class="blob blob-1"></div>
+  <div class="max-w-4xl mx-auto text-center reveal relative">
+    <p class="section-eyebrow text-orange-400 mb-3">Portfolio</p>
+    <h1 class="font-display font-extrabold text-4xl sm:text-5xl mb-5">Results Across Industries</h1>
+    <p class="opacity-70">A selection of SEO, paid media, social and website projects — with the numbers behind them.</p>
+  </div>
+</section>
+
+<!-- Filters -->
+<!-- <section class="max-w-6xl mx-auto px-5 sm:px-8">
+  <div data-filter-group="[data-portfolio-item]" class="flex flex-wrap gap-3 justify-center mb-10 reveal">
+    <button data-filter="all" class="btn-gradient text-white text-xs font-semibold px-4 py-2 rounded-full">All</button>
+    <button data-filter="seo" class="btn-outline text-xs font-semibold px-4 py-2 rounded-full">SEO</button>
+    <button data-filter="ads" class="btn-outline text-xs font-semibold px-4 py-2 rounded-full">Google Ads</button>
+    <button data-filter="social" class="btn-outline text-xs font-semibold px-4 py-2 rounded-full">Social Media</button>
+    <button data-filter="web" class="btn-outline text-xs font-semibold px-4 py-2 rounded-full">Website Dev</button>
+  </div>
+</section> -->
+</section>
+
+
+<section class="max-w-6xl mx-auto px-5 sm:px-8 pb-24 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <article data-portfolio-item data-category="seo" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Education · SEO</p>
+    <h3 class="font-display font-semibold mb-2">Dubai Education Institute SEO Growth</h3>
+    <p class="text-xs opacity-60 mb-4">Technical SEO, content optimization and keyword strategy for an education institute in Dubai.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">200%</span><span class="opacity-50">Organic Leads</span>
+      <span class="gradient-text font-bold ml-auto">20+</span><span class="opacity-50">Keywords Rank #1</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="ads" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Education · Google Ads</p>
+    <h3 class="font-display font-semibold mb-2">Dubai Education Lead Generation</h3>
+    <p class="text-xs opacity-60 mb-4">Search + Performance Max restructure with tightened conversion tracking.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">9K</span><span class="opacity-50">Ad Spend</span>
+      <span class="gradient-text font-bold ml-auto">50+</span><span class="opacity-50">Leads</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="social" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Healthcare · Social Media</p>
+    <h3 class="font-display font-semibold mb-2">Clinic Instagram &amp; Meta Ads Growth</h3>
+    <p class="text-xs opacity-60 mb-4">Content strategy paired with local Meta Ads for appointment bookings.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">+180%</span><span class="opacity-50">Followers</span>
+      <span class="gradient-text font-bold ml-auto">3.4x</span><span class="opacity-50">Bookings</span>
+    </div>
+  </article>
+
+
+  <article data-portfolio-item data-category="seo" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">E-commerce · SEO</p>
+    <h3 class="font-display font-semibold mb-2">Online Pharmacy & Diagnostics Organic Growth</h3>
+    <p class="text-xs opacity-60 mb-4">SEO strategy for an online pharmacy, combining technical SEO, content optimization, backlinks and product-page improvements.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">90%</span><span class="opacity-50">Organic Revenue</span>
+      <span class="gradient-text font-bold ml-auto">3 Months</span><span class="opacity-50">Growth Period</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="ads" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Healthcare · Local SEO</p>
+    <h3 class="font-display font-semibold mb-2">Scans and Diagnostics Local Search Growth</h3>
+    <p class="text-xs opacity-60 mb-4">Local SEO strategy focused on improving location visibility, local rankings, improving customer reviews and customer enquiries.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">90%</span><span class="opacity-50">Local Visibility</span>
+      <span class="gradient-text font-bold ml-auto">60%</span><span class="opacity-50">Organic Enquiries</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="social" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Education · Meta Ads</p>
+    <h3 class="font-display font-semibold mb-2">Education Institute Paid Ads Lead Generation</h3>
+    <p class="text-xs opacity-60 mb-4">Facebook and Instagram lead-generation campaigns designed to generate enquiries at controlled advertising spend.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">1000+</span><span class="opacity-50">Leads</span>
+      <span class="gradient-text font-bold ml-auto">15K</span><span class="opacity-50">Budget</span>
+    </div>
+  </article>
+
+
+
+  <article data-portfolio-item data-category="seo" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Education · SEO</p>
+    <h3 class="font-display font-semibold mb-2">Education Institute Organic Traffic</h3>
+    <p class="text-xs opacity-60 mb-4">Keyword research, technical SEO, content strategy and on-page optimization for an education business.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">90%</span><span class="opacity-50">Organic Traffic</span>
+      <span class="gradient-text font-bold ml-auto">15+</span><span class="opacity-50"> Keywords Rank #1</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="ads" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Training · Local SEO</p>
+    <h3 class="font-display font-semibold mb-2">Training Institute Local SEO</h3>
+    <p class="text-xs opacity-60 mb-4">Location-based SEO strategy designed to increase visibility and website visitors for a training institute.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">5X</span><span class="opacity-50">Visitors Growth</span>
+      <span class="gradient-text font-bold ml-auto">Local SEO</span><span class="opacity-50">Local Visibility</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="social" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">E-commerce · Shopping Ads</p>
+    <h3 class="font-display font-semibold mb-2">Fashion Store Google Shopping Ads</h3>
+    <p class="text-xs opacity-60 mb-4">Google Shopping campaign for sweaters and raincoats, focused on daily leads with a controlled budget.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">20+</span><span class="opacity-50">Daily Leads</span>
+      <span class="gradient-text font-bold ml-auto">300 per Day</span><span class="opacity-50">Budget</span>
+    </div>
+  </article>
+
+
+
+  <article data-portfolio-item data-category="web" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Ecommerce · Website Dev</p>
+    <h3 class="font-display font-semibold mb-2">D2C Skincare WooCommerce Rebuild</h3>
+    <p class="text-xs opacity-60 mb-4">Faster, SEO-ready storefront with a streamlined checkout flow.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">-38%</span><span class="opacity-50">Load Time</span>
+      <span class="gradient-text font-bold ml-auto">+27%</span><span class="opacity-50">Conversion</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="seo" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Healthcare · Google Ads</p>
+    <h3 class="font-display font-semibold mb-2">Hospital Lead Generation Campaign</h3>
+    <p class="text-xs opacity-60 mb-4">Performance-focused Google Ads campaign for healthcare services targeting high-intent patients.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">400+</span><span class="opacity-50">Angiogram Leads</span>
+      <span class="gradient-text font-bold ml-auto">30K</span><span class="opacity-50">Budget</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="ads" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Ecommerce · Amazon Ads</p>
+    <h3 class="font-display font-semibold mb-2">Amazon Product Launch Campaign</h3>
+    <p class="text-xs opacity-60 mb-4">Sponsored Products + DSP strategy for a new category launch.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">4.1x</span><span class="opacity-50">ROAS</span>
+    </div>
+  </article>
+
+
+    <article data-portfolio-item data-category="web" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">B2B & B2C · LinkedIn Ads</p>
+    <h3 class="font-display font-semibold mb-2">B2B and B2C Lead Generation</h3>
+    <p class="text-xs opacity-60 mb-4">LinkedIn lead-generation campaign targeting B2B/B2C service audiences across India.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">50+</span><span class="opacity-50">Leads</span>
+      <span class="gradient-text font-bold ml-auto">All over India</span><span class="opacity-50">Target</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="seo" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Social Media · Paid Campaigns</p>
+    <h3 class="font-display font-semibold mb-2"> Training Institute Social Growth</h3>
+    <p class="text-xs opacity-60 mb-4">Social media lead campaigns combined with audience targeting and paid campaign optimization.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">70+</span><span class="opacity-50">Follower Growth</span>
+      <span class="gradient-text font-bold ml-auto">3X</span><span class="opacity-50">ROAS</span>
+    </div>
+  </article>
+
+  <article data-portfolio-item data-category="ads" class="glass rounded-2xl p-6 reveal">
+    <p class="text-xs text-teal-400 font-semibold mb-2">Healthcare · SEO + Google Ads</p>
+    <h3 class="font-display font-semibold mb-2"> Hospital Digital Growth</h3>
+    <p class="text-xs opacity-60 mb-4">SEO and Google Ads campaigns focused on generating healthcare enquiries for angiogram, hernia and MHC.</p>
+    <div class="flex gap-4 text-xs">
+      <span class="gradient-text font-bold">400+</span><span class="opacity-50">Healthcare Leads</span>
+      <span class="gradient-text font-bold">Chennai</span><span class="opacity-50">Target</span>
+    </div>
+  </article>
+  
+</section>
+
+<footer class="border-t border-white/5 pt-16 pb-8 px-5 sm:px-8">
+  <p class="text-center text-xs opacity-40">© <span data-year></span> Saravanan J. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/+917904782477" target="_blank" class="fab fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white text-2xl">💬</a>
+<button id="back-to-top" class="fab fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full glass flex items-center justify-center opacity-0 pointer-events-none transition-opacity">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
